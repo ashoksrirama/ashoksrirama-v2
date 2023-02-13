@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Ashok Srirama',
   tagline: '"The whole problem with the world is that fools and fanatics are always so certain of themselves, but wiser people so full of doubts."',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/header.png',
 
   // Set the production url of your site here
   url: 'https://ashoksrirama.com',
