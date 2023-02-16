@@ -3,7 +3,7 @@ slug: aws-blog-post
 title: AWS Blog Posts
 authors:
   name: Ashok Srirama
-  title: Cloud Architect
+  title: Sr. Specialist Solutions Architect
   url: https://github.com/ashoksrirama
   image_url: https://github.com/ashoksrirama.png
 tags: [aws, blogs]
