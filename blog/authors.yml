@@ -7,11 +7,17 @@ ashok:
 hemant:
   name: Hemanth AVS
   title: Sr. Specialist Solutions Architect
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+  url: https://github.com/hemanth-avs
+  image_url: https://github.com/hemanth-avs.png
 
-slorber:
+rfrancis:
   name: Rajesh Francis
   title: Sr. Analytics Specialist
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
+
+kasanip:
+  name: Pavan Kasani
+  title: Sr. Solutions Architect
+  image_url: https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2021/07/27/Pavankumar-Kasani.jpg
+   

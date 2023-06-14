@@ -49,3 +49,14 @@ Today, group claims information is not available in Google OIDC ID Token. To ove
 
 [Read more](https://aws.amazon.com/blogs/containers/authenticate-to-amazon-eks-using-google-workspace/)
 
+### How to use AWS App2Container to automate the setup of Azure DevOps CI/CD pipelines
+
+In this blog post, we will walk through how to automate the creation of an Azure DevOps release pipeline that deploys containerized applications to AWS. This solution will save you time and effort if you’re using Azure DevOps for version control or CI/CD and if you’re modernizing your applications using containers. We will use AWS App2Container (A2C) to modernize a sample .NET application into a container and then automate the creation of an Azure DevOps release pipeline. With A2C, you can transform existing applications running in virtual machines into containers without changing any code.
+
+[Read more](https://aws.amazon.com/blogs/modernizing-with-aws/how-to-use-aws-app2container-to-automate-the-setup-of-azure-devops-ci-cd-pipelines/)
+
+### Simplify Amazon EKS Multi-Cluster Authentication with Open Source Pinniped
+
+Amazon EKS has native support for AWS Identity and Access Management (AWS IAM) users and roles as entities that can authenticate against a cluster. However, some of our customers use enterprise identity providers (IdP) like Active Directory, Okta, Google Workspace, and others, to manage identities in their organizations. Setting up and managing these authentication mechanisms across multiple Amazon EKS clusters for their workloads and integrating them with an IdP service is time consuming and operationally inefficient. To simplify this process, this blog describes how customers can use Pinniped across their Amazon EKS clusters
+
+[Read more](https://aws.amazon.com/blogs/opensource/simplify-amazon-eks-multi-cluster-authentication-with-open-source-pinniped/)
