@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Configuring MostAllocated Scheduler Strategy in Amazon EKS
+# Configure MostAllocated Scheduler Strategy in Amazon EKS
 
 ### Prerequisites
 
@@ -23,7 +23,7 @@ export AWS_REGION=us-west-2
 export EKS_CLUSTER=eksdemo
 ```
 
-As of this writing, Amazon EKS doesn't allow to customize the `kube-scheduler` configuration. Many customers ask how they can use `MostAllocated` strategy to efficiently binpack their worker nodes.
+As of this writing, Amazon EKS doesn't allow to customize the `kube-scheduler` configuration. Many customers ask how they can use `MostAllocated` strategy to efficiently binpack their worker nodes. Let's see how can we create a custom scheduler with `MostAllocated` strategy and assign it to our k8s deployments.
 
 ### Step 1: Create `MostAllocated` kube-scheduler configuration
 
@@ -49,6 +49,7 @@ data:
             type: MostAllocated
         name: NodeResourcesFit
       schedulerName: my-scheduler
+    # Enabling leaderElection require additional permissions to the SA
     leaderElection:
       leaderElect: true
       resourceNamespace: kube-system    
@@ -64,7 +65,7 @@ EOF
 configmap/most-allocated-scheduler-policy created
 ```
 
-### Step 2: Create ClusterRole and ClusterRolebindings for the custom scheduler
+### Step 2: Create ServiceAccount and ClusterRolebindings for the custom scheduler
 
 ```bash
 cat <<EOF | kubectl apply -f -
@@ -150,6 +151,8 @@ serviceaccount/my-scheduler created
 clusterrolebinding.rbac.authorization.k8s.io/my-scheduler-as-kube-scheduler created
 clusterrolebinding.rbac.authorization.k8s.io/my-scheduler-as-volume-scheduler created
 rolebinding.rbac.authorization.k8s.io/my-scheduler-extension-apiserver-authentication-reader created
+clusterrole.rbac.authorization.k8s.io/my-scheduler created
+clusterrolebinding.rbac.authorization.k8s.io/my-scheduler created
 ```
 
 ### Step 3: Deploy the custom scheduler using above configuration
@@ -186,6 +189,7 @@ spec:
         args:
         - --config=/etc/kubernetes/my-scheduler/my-scheduler-config.yaml
         - --leader-elect=true
+        # log verbose level
         - --v=4
         # update the image based on your EKS version
         image: registry.k8s.io/kube-scheduler:v1.28.5
@@ -251,7 +255,7 @@ EOF
 ```
 
 ```output
-deployment.apps/nginx-deployment created
+deployment.apps/nginx created
 ```
 
 nginx pods will be scheduled to a node with higher utilization based on the scoring strategy defined in the Scheduler Configuration.
