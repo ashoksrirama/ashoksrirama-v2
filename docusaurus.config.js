@@ -32,6 +32,10 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [[require.resolve("docusaurus-lunr-search"), {
+    enableHighlight: true, maxHits: 10
+  }]],
+
   presets: [
     [
       'classic',
@@ -133,35 +137,35 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'N69BPRZQ6L',
+      // algolia: {
+      //   // The application ID provided by Algolia
+      //   appId: 'N69BPRZQ6L',
   
-        // Public API key: it is safe to commit it
-        apiKey: '0064aa1b3d48e9245e5f3f2136675417',
+      //   // Public API key: it is safe to commit it
+      //   apiKey: '0064aa1b3d48e9245e5f3f2136675417',
   
-        indexName: 'ashoksrirama',
+      //   indexName: 'ashoksrirama',
   
-        // Optional: see doc section below
-        contextualSearch: true,
+      //   // Optional: see doc section below
+      //   contextualSearch: true,
   
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        // externalUrlRegex: 'external\\.com|domain\\.com',
+      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      //   // externalUrlRegex: 'external\\.com|domain\\.com',
   
-        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        replaceSearchResultPathname: {
-          from: '/docs/', // or as RegExp: /\/docs\//
-          to: '/',
-        },
+      //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      //   replaceSearchResultPathname: {
+      //     from: '/docs/', // or as RegExp: /\/docs\//
+      //     to: '/',
+      //   },
   
-        // Optional: Algolia search parameters
-        searchParameters: {},
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
   
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
+      //   // Optional: path for search page that enabled by default (`false` to disable it)
+      //   searchPagePath: 'search',
   
-        //... other Algolia params
-      },  
+      //   //... other Algolia params
+      // },  
     }),
 };
 
