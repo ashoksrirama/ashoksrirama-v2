@@ -9,6 +9,12 @@ authors:
 tags: [aws, blogs]
 ---
 
+### Rippling’s journey migrating to the new VPC CNI Network Policy Engine
+
+Rippling is a workforce management system that eliminates the friction of running a business, combining HR, IT, and Finance apps on a unified data platform. Rippling’s mission is to free up intelligent people to work on hard problems. In this blog, we discusses the challenges Rippling faced with their existing CNI plugin and the benefits of using Amazon VPC CNI Network Policy Engine. The blog also details the steps Rippling took to migrate their Amazon EKS cluster using a blue-green strategy. 
+
+[Read more](https://aws.amazon.com/blogs/containers/ripplings-journey-migrating-to-the-new-vpc-cni-network-policy-engine/)
+
 ### Amazon VPC CNI introduces Enhanced Subnet Discovery
 
 Users modernizing their applications using Amazon Elastic Kubernetes Service (Amazon EKS) on AWS often run into critical IPv4 address space exhaustion driven by scale. They want to maximize usage of the VPC CIDRs and subnets provisioned for the EKS pods without introducing additional operational complexity. We believe that use of IPv6 address space is the long-term solution for users to build scalable networking solutions. However, we also understand that Amazon EKS users may be constrained to IPv4 environments owing to dependencies on other networking components and applications’ support for IPv6. Therefore, Amazon EKS is introducing support for Enhanced Subnet Discovery for helping users streamline network configuration and scale IPv4 based clusters without adding operational complexity.
