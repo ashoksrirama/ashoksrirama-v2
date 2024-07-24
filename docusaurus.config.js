@@ -34,7 +34,7 @@ const config = {
 
   plugins: [[require.resolve("docusaurus-lunr-search"), {
     enableHighlight: true, maxHits: 10
-  }], [require.resolve("docusaurus-plugin-image-zoom")]],
+  }], [require.resolve("docusaurus-plugin-image-zoom"), {}]],
 
   presets: [
     [
