@@ -34,7 +34,7 @@ const config = {
 
   plugins: [[require.resolve("docusaurus-lunr-search"), {
     enableHighlight: true, maxHits: 10
-  }]],
+  }], [require.resolve("docusaurus-plugin-image-zoom")]],
 
   presets: [
     [
@@ -166,7 +166,18 @@ const config = {
   
       //   //... other Algolia params
       // },  
-    }),
+    //},
+    zoom: {
+        selector: '.markdown :not(em) > img',
+        config: {
+          background: {
+            light: 'rgb(255, 255, 255)',
+            dark: 'rgb(50, 50, 50)'
+          },
+        }
+      }
+    }
+  ),
 };
 
 module.exports = config;
