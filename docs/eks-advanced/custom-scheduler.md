@@ -39,6 +39,7 @@ data:
       - args:
           scoringStrategy:
             resources:
+            # Update these weights according to your requirements
             - name: cpu
               weight: 1
             - name: memory
@@ -48,6 +49,15 @@ data:
               weight: 1
             type: MostAllocated
         name: NodeResourcesFit
+      plugins:
+        score:
+          enabled:
+          - name: NodeResourcesFit
+            weight: 1
+          disabled:
+          # Disabling these plugins to avoid spreading the pods
+          - name: NodeResourcesBalancedAllocation
+          - name: PodTopologySpread
       schedulerName: my-scheduler
     # Enabling leaderElection require additional permissions to the SA
     leaderElection:
