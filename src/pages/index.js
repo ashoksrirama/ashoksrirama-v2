@@ -10,11 +10,11 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{'background-color': 'white', 'color': '#449bbb'}}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
       <img className={styles.circular_image} src={selfie} alt="selfie"  />
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle" style={{'font-family': 'cursive', 'font-weight': 'bold'}}>{siteConfig.tagline}</p>
+        <p className="hero__subtitle" style={{'fontFamily': 'cursive', 'fontWeight': 'bold'}}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           {/* <Link
             className="button button--secondary button--lg"

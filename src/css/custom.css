@@ -28,3 +28,15 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Custom hero styling for light theme */
+.hero--primary {
+  background-color: white;
+  color: #449bbb;
+}
+
+/* Custom hero styling for dark theme */
+[data-theme='dark'] .hero--primary {
+  background-color: #1b1b1d;
+  color: #25c2a0;
+}
