@@ -4,32 +4,33 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: '☁️ Cloud Native Enthusiast',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        I make containers go brrr on AWS. EKS, ECS, Fargate - if it runs in a box, 
+        I've probably broken it at 3 AM and fixed it by 3:05 AM. ☕
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '💡 Thought Leader',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Author of "Kubernetes for Generative AI Solutions" and contributor to the AWS Containers Blog. 
+        Sharing insights, best practices, and lessons learned from real-world implementations. 
+        Because knowledge grows when shared! 🚀
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '🎯 Problem Solver',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Principal Specialist Solutions Architect at AWS. I help customers avoid the mistakes I made, 
+        so they can make entirely new and creative mistakes instead. 🚀
       </>
     ),
   },

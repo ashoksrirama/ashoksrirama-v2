@@ -82,9 +82,10 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Tutorials',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/about', label: 'About', position: 'left'},
           {
             href: 'https://github.com/ashoksrirama',
             label: 'GitHub',
@@ -96,19 +97,27 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Learn',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Tutorials',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: '📚 My Book',
+                href: 'https://www.amazon.com/Kubernetes-Generative-Solutions-designing-optimizing/dp/1836209932/',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Connect',
             items: [
               {
-                label: 'Github',
+                label: 'GitHub',
                 href: 'https://github.com/ashoksrirama',
               },
               {
@@ -125,17 +134,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'AWS Containers Blog',
+                href: 'https://aws.amazon.com/blogs/containers/',
               },
-              // {
-              //   label: 'GitHub',
-              //   href: 'https://github.com/facebook/docusaurus',
-              // },
+              {
+                label: 'AWS Documentation',
+                href: 'https://docs.aws.amazon.com/',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Ashok Srirama, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ashok Srirama. Built with Docusaurus. Powered by ☕ and curiosity.`,
       },
       prism: {
         theme: lightCodeTheme,

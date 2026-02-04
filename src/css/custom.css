@@ -40,3 +40,67 @@
   background-color: #1b1b1d;
   color: #25c2a0;
 }
+
+/* Add some personality to links */
+a {
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Make buttons more appealing */
+.button {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Improve blog post cards */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Add some flair to the hero section */
+.hero__title {
+  font-size: 3rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero__subtitle {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make code blocks stand out */
+code {
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+}
+
+/* Improve admonitions (tips, warnings, etc.) */
+.admonition {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
