@@ -1,6 +1,6 @@
 ---
 slug: cross-cluster-argo-workflows-eks
-title: "Cross EKS Cluster Execution of Argo Workflows"
+title: "Running Argo Workflows Across Multiple EKS Clusters"
 authors: ashok
 tags: [eks, kubernetes, argo-workflows]
 ---

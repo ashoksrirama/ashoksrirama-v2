@@ -1,6 +1,6 @@
 ---
 slug: nginx-ingress-controller-eks
-title: "Nginx Ingress Controller with AWS ALB on Amazon EKS"
+title: "Running Nginx Ingress Behind AWS ALB on EKS"
 authors: ashok
 tags: [eks, kubernetes, networking]
 ---

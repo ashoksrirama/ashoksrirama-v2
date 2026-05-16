@@ -1,6 +1,6 @@
 ---
 slug: custom-scheduler-mostallocated-eks
-title: "Configure MostAllocated Scheduler Strategy in Amazon EKS"
+title: "Bin-Packing Pods with MostAllocated Scheduler on EKS"
 authors: ashok
 tags: [eks, kubernetes, scheduling]
 ---

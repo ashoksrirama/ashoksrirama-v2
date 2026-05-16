@@ -211,24 +211,29 @@ export default function Publications() {
       description="AWS blog posts and publications by Ashok Srirama, organized by topic"
     >
       <main className={styles.publicationsPage}>
-        <div className="container">
-          <div className={styles.header}>
-            <h1 className={styles.pageTitle}>Publications</h1>
-            <p className={styles.pageSubtitle}>
-              AWS blog posts and technical articles I've authored or co-authored, organized by topic.
-            </p>
+        <article>
+          <div className="markdown container">
+            <div className={styles.header}>
+              <h1 className={styles.pageTitle}>Publications</h1>
+              <p className={styles.pageSubtitle}>
+                AWS blog posts and technical articles I've authored or co-authored, organized by topic.
+              </p>
+            </div>
+            {publications.map((section) => {
+              const sectionId = section.category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+              return (
+                <section key={section.category} className={styles.categorySection} data-search-children>
+                  <h2 className={styles.categoryTitle}>{section.category}<a className="anchor" id={sectionId} href={`#${sectionId}`} aria-hidden="true"></a></h2>
+                  <div className={styles.publicationList} data-search-children>
+                    {section.items.map((item) => (
+                      <PublicationItem key={`${item.title}-${section.category}`} {...item} />
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
           </div>
-          {publications.map((section) => (
-            <section key={section.category} className={styles.categorySection}>
-              <h2 className={styles.categoryTitle}>{section.category}</h2>
-              <div className={styles.publicationList}>
-                {section.items.map((item) => (
-                  <PublicationItem key={`${item.title}-${section.category}`} {...item} />
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+        </article>
       </main>
     </Layout>
   );
