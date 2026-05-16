@@ -1,14 +1,17 @@
 ---
-sidebar_position: 2
+slug: cross-cluster-argo-workflows-eks
+title: "Cross EKS Cluster Execution of Argo Workflows"
+authors: ashok
+tags: [eks, kubernetes, argo-workflows]
 ---
 
-# Cross EKS Cluster Execution of Argo Workflows
+In this walkthrough, we will explore how to run argo-workflow-controller in a hub EKS cluster and execute the actual workflows in a spoke EKS cluster. These two EKS clusters are deployed to different AWS Accounts and we will utilize IAM Roles and EKS Pod Identity for authentication.
 
-In this walkthrough, we will explore how to run argo-workflow-controller in a hub EKS cluster and execute the actual workflows in a spoke EKS cluster. These two eks clusters are deployed to different AWS Accounts and we will utilize IAM Roles and EKS Pod Identity for authentication.
+In this approach, the entire workflow is executed in the spoke cluster. argo-workflow-controller deployed to the hub cluster watches for workflow CRD changes in the spoke cluster and launches k8s pods to execute the various steps.
 
-In this approach, entire workflow is executed in the spoke cluster. argo-workflow-controller deployed to hub cluster watches for workflow CRD changes in the spoke cluster and launch k8s pods to execute the various steps.
+<!-- truncate -->
 
-![ArgoWorkflows](../../static/img/argo-workflows.png)
+![ArgoWorkflows](/img/argo-workflows.png)
 
 ### Prerequisites
 
@@ -293,4 +296,4 @@ NAME                READY   STATUS      RESTARTS   AGE
 hello-world-klhjq   0/2     Completed   0          97s
 ```
 
-YaY, we completed the walkthrough of running argo-workflow controller in Hub EKS cluster and actual workflow executions in a spoke EKS cluster.
+We completed the walkthrough of running argo-workflow controller in Hub EKS cluster and actual workflow executions in a spoke EKS cluster.

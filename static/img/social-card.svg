@@ -1,0 +1,14 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5"/>
+      <stop offset="50%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="100" y="250" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="800" fill="white" letter-spacing="-2">Ashok Srirama</text>
+  <text x="100" y="330" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="400" fill="rgba(255,255,255,0.9)">Principal Specialist Solutions Architect at AWS</text>
+  <text x="100" y="400" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="400" fill="rgba(255,255,255,0.7)">Cloud Native | Kubernetes | Generative AI</text>
+  <text x="100" y="530" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="500" fill="rgba(255,255,255,0.6)">ashoksrirama.com</text>
+</svg>

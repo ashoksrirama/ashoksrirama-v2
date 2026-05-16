@@ -1,8 +1,13 @@
 ---
-sidebar_position: 1
+slug: custom-scheduler-mostallocated-eks
+title: "Configure MostAllocated Scheduler Strategy in Amazon EKS"
+authors: ashok
+tags: [eks, kubernetes, scheduling]
 ---
 
-# Configure MostAllocated Scheduler Strategy in Amazon EKS
+As of this writing, Amazon EKS doesn't allow you to customize the `kube-scheduler` configuration. Many customers ask how they can use `MostAllocated` strategy to efficiently binpack their worker nodes. Let's see how we can create a custom scheduler with `MostAllocated` strategy and assign it to our k8s deployments.
+
+<!-- truncate -->
 
 ### Prerequisites
 
@@ -22,8 +27,6 @@ Wait for the cluster message as shown above and export the following `env` varia
 export AWS_REGION=us-west-2
 export EKS_CLUSTER=eksdemo
 ```
-
-As of this writing, Amazon EKS doesn't allow to customize the `kube-scheduler` configuration. Many customers ask how they can use `MostAllocated` strategy to efficiently binpack their worker nodes. Let's see how can we create a custom scheduler with `MostAllocated` strategy and assign it to our k8s deployments.
 
 ### Step 1: Create `MostAllocated` kube-scheduler configuration
 

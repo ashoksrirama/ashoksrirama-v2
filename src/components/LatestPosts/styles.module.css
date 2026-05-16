@@ -1,0 +1,114 @@
+.latestPosts {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #f5f3ff 0%, #eef2ff 100%);
+}
+
+[data-theme='dark'] .latestPosts {
+  background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.viewAll {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.viewAll:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.postCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  border-bottom: 3px solid #818cf8;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.postCard:hover {
+  transform: translateY(-4px);
+  border-bottom-color: #4f46e5;
+  box-shadow: 0 20px 25px rgba(79, 70, 229, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  color: inherit;
+}
+
+[data-theme='dark'] .postCard {
+  background: #1e293b;
+  border-color: rgba(129, 140, 248, 0.15);
+  border-bottom-color: rgba(129, 140, 248, 0.4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .postCard:hover {
+  border-bottom-color: #818cf8;
+  box-shadow: 0 20px 25px rgba(129, 140, 248, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.postDate {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.postTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+  color: #1e293b;
+}
+
+[data-theme='dark'] .postTitle {
+  color: #e2e8f0;
+}
+
+.postDescription {
+  font-size: 0.9rem;
+  color: var(--site-color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .postsGrid {
+    grid-template-columns: 1fr;
+  }
+}

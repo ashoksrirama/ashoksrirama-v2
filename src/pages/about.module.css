@@ -1,0 +1,202 @@
+.aboutPage {
+  padding: 3rem 0 5rem;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+[data-theme='dark'] .heroSection {
+  border-bottom-color: rgba(129, 140, 248, 0.15);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .heroTitle {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--site-color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  background: rgba(79, 70, 229, 0.06);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  background: rgba(79, 70, 229, 0.12);
+  border-color: rgba(79, 70, 229, 0.25);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .socialLink {
+  color: #a5b4fc;
+  background: rgba(129, 140, 248, 0.08);
+  border-color: rgba(129, 140, 248, 0.15);
+}
+
+[data-theme='dark'] .socialLink:hover {
+  background: rgba(129, 140, 248, 0.15);
+  border-color: rgba(129, 140, 248, 0.3);
+  color: #c7d2fe;
+}
+
+.socialIcon {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  border-bottom: 3px solid #818cf8;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  border-bottom-color: #4f46e5;
+  box-shadow: 0 20px 25px rgba(79, 70, 229, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  transform: translateY(-3px);
+}
+
+[data-theme='dark'] .card {
+  background: #1e293b;
+  border-color: rgba(129, 140, 248, 0.15);
+  border-bottom-color: rgba(129, 140, 248, 0.4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .card:hover {
+  border-bottom-color: #818cf8;
+  box-shadow: 0 20px 25px rgba(129, 140, 248, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.cardText {
+  color: var(--site-color-text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.highlightList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--site-color-text-muted);
+  line-height: 1.5;
+}
+
+.highlightIcon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.quote {
+  border-left: 3px solid var(--ifm-color-primary);
+  padding: 0.75rem 1.25rem;
+  margin: 0 0 1rem;
+  background: rgba(79, 70, 229, 0.04);
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--site-color-text-muted);
+}
+
+[data-theme='dark'] .quote {
+  background: rgba(129, 140, 248, 0.06);
+}
+
+.bookLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.bookLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}

@@ -45,19 +45,12 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          blogSidebarCount: 'ALL',
+          postsPerPage: 5,
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -70,7 +63,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.svg',
       navbar: {
         title: 'Ashok Srirama',
         logo: {
@@ -78,13 +71,8 @@ const config = {
           src: 'img/selfie.jpeg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorials',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/publications', label: 'Publications', position: 'left'},
           {to: '/about', label: 'About', position: 'left'},
           {
             href: 'https://github.com/ashoksrirama',
@@ -97,18 +85,18 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Learn',
+            title: 'Content',
             items: [
-              {
-                label: 'Tutorials',
-                to: '/docs/intro',
-              },
               {
                 label: 'Blog',
                 to: '/blog',
               },
               {
-                label: '📚 My Book',
+                label: 'Publications',
+                to: '/publications',
+              },
+              {
+                label: 'My Book',
                 href: 'https://www.amazon.com/Kubernetes-Generative-Solutions-designing-optimizing/dp/1836209932/',
               },
             ],
@@ -141,6 +129,10 @@ const config = {
                 label: 'AWS Documentation',
                 href: 'https://docs.aws.amazon.com/',
               },
+              {
+                label: 'RSS Feed',
+                href: 'https://ashoksrirama.com/blog/rss.xml',
+              },
             ],
           },
         ],
@@ -150,37 +142,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: 'N69BPRZQ6L',
-  
-      //   // Public API key: it is safe to commit it
-      //   apiKey: '0064aa1b3d48e9245e5f3f2136675417',
-  
-      //   indexName: 'ashoksrirama',
-  
-      //   // Optional: see doc section below
-      //   contextualSearch: true,
-  
-      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      //   // externalUrlRegex: 'external\\.com|domain\\.com',
-  
-      //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      //   replaceSearchResultPathname: {
-      //     from: '/docs/', // or as RegExp: /\/docs\//
-      //     to: '/',
-      //   },
-  
-      //   // Optional: Algolia search parameters
-      //   searchParameters: {},
-  
-      //   // Optional: path for search page that enabled by default (`false` to disable it)
-      //   searchPagePath: 'search',
-  
-      //   //... other Algolia params
-      // },  
-    //},
-    zoom: {
+      zoom: {
         selector: '.markdown :not(em) > img',
         config: {
           background: {
@@ -189,8 +151,7 @@ const config = {
           },
         }
       }
-    }
-  ),
+    }),
 };
 
 module.exports = config;

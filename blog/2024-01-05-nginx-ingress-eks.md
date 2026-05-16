@@ -1,13 +1,15 @@
 ---
-sidebar_position: 3
+slug: nginx-ingress-controller-eks
+title: "Nginx Ingress Controller with AWS ALB on Amazon EKS"
+authors: ashok
+tags: [eks, kubernetes, networking]
 ---
-
-# Nginx Ingress Controller
 
 In this walkthrough, we will use two ingress controllers setup in our Amazon EKS cluster. Nginx ingress is used to expose all applications running in the cluster and nginx ingress controller itself is exposed via AWS Application LoadBalancer (Ingress resource) by AWS LB controller. By doing this, you can attach AWS Web Application Firewall (AWS WAF) on the ALB to get protection against Layer 7 attacks, and overcome the hard limits of AWS ALB (such as 100 target groups per ALB, etc.,).
 
+<!-- truncate -->
 
-![Nginx Ingress Controller](../../static/img/eks-nginx-controller.png)
+![Nginx Ingress Controller](/img/eks-nginx-controller.png)
 
 ### Prerequisites
 
@@ -181,4 +183,4 @@ curl http://k8s-nginxing-ingressn-af3887fb52-1426628659.us-west-2.elb.amazonaws.
 <html><body><h1>It works!</h1></body></html>
 ```
 
-YaY! We successfully validated two ingress controllers setup in our Amazon EKS cluster.
+We successfully validated two ingress controllers setup in our Amazon EKS cluster.

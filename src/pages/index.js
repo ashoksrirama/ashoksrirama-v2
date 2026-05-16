@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import BookSection from '@site/src/components/BookSection';
+import LatestPosts from '@site/src/components/LatestPosts';
 import selfie from "/static/img/selfie2.jpg";
 import styles from './index.module.css';
 
@@ -13,16 +13,21 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-      <img className={styles.circular_image} src={selfie} alt="selfie"  />
+        <img className={styles.circular_image} src={selfie} alt="Ashok Srirama" />
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle" style={{'fontFamily': 'cursive', 'fontWeight': 'bold'}}>{siteConfig.tagline}</p>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/blog">
-            Read My AWS Adventures 📚
+            Read My Blog
           </Link>
-        </div>        
+          <Link
+            className="button button--secondary button--lg"
+            to="/about">
+            About Me
+          </Link>
+        </div>
       </div>
     </header>
   );
@@ -37,7 +42,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <BookSection />
-        <HomepageFeatures />
+        <LatestPosts />
       </main>
     </Layout>
   );
