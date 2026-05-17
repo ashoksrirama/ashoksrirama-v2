@@ -209,6 +209,29 @@ code {
   color: #ffffff;
 }
 
+.navbar .navbar__toggle {
+  color: #ffffff;
+}
+
+.navbar-sidebar .navbar-sidebar__brand .navbar__title,
+.navbar-sidebar .menu__link {
+  color: var(--ifm-font-color-base);
+}
+
+.navbar-sidebar .menu__link {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+}
+
+.navbar-sidebar {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.navbar-sidebar .navbar-sidebar__items {
+  height: auto;
+}
+
 [data-theme='dark'] .navbar {
   background: linear-gradient(90deg, #1e1b4b, #312e81);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
